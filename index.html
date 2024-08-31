@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const resume = {
+    personalDetails: {
+        name: "Sheeja B",
+        email: "Sheejabenadict16@gmail.com",
+        fatherName: "Benadict",
+        motherName: "Reejance",
+        phoneNumber: "+919087697913",
+        gender: "Female",
+        nationality: "Indian",
+        maritalStatus: "Married"
+    },
+    skills: ["HTML", "CSS","JavaScript"],
+    address: {
+      street: "Medavilagam",
+      place: "Neerody",
+      district: "Kanyakumari",
+      state: "Tamil Nadu",
+      postalCode: "629160"
+    },
+    languagesKnown: [
+      {
+        language: "Tamil",
+        fluency: ["Read", "Write", "Speak"]
+      },
+      {
+        language: "English",
+        fluency: ["Read", "Write", "Speak"]
+      },
+      {
+        language: "Malayalam",
+        fluency: ["Read", "Write", "Speak"]
+      }
+    ],
+    education: [
+      {
+        institution: "MarEpraem College of Engineering",
+        course: "ME",
+        cgpa: "84%"
+      },
+      {
+        institution: "Narayana Guru College of Engineering",
+        course: "BE",
+        cgpa: "70%"
+      },
+      {
+        institution: "St. Aloysius Higher Secondary School",
+        course: "HSC",
+        cgpa: "65%"
+      },
+      {
+        institution: "St. Aloysius Higher Secondary School",
+        course: "SSLC",
+        cgpa: "85%"
+      }
+    ]
+  };
+  // For loop to iterate over skills
+for (let i = 0; i < resume.skills.length; i++) {
+  console.log(resume.skills[i]);
+}
+
+// For loop to iterate over education
+for (let i = 0; i < resume.education.length; i++) {
+  console.log(resume.education[i].institution + ": " + resume.education[i].cgpa);
+}
+
+// For...in loop to iterate over properties of personalDetails
+for (let key in resume.personalDetails) {
+  console.log(key + ": " + resume.personalDetails[key]);
+}
+
+// For...in loop to iterate over properties of address
+for (let key in resume.address) {
+  console.log(key + ": " + resume.address[key]);
+}
+
+// For...of loop to iterate over skills
+for (let skill of resume.skills) {
+  console.log(skill);
+}
+
+// For...of loop to iterate over languagesKnown
+for (let lang of resume.languagesKnown) {
+  console.log(lang.language);
+  for (let fluency of lang.fluency) {
+    console.log(fluency);
+  }
+}
+
+// For...of loop to iterate over education
+for (let edu of resume.education) {
+  console.log(edu.institution + ": " + edu.cgpa);
+}
+
+// forEach loop to iterate over skills
+resume.skills.forEach((skill) => {
+  console.log(skill);
+});
+
+// forEach loop to iterate over education
+resume.education.forEach((edu) => {
+  console.log(edu.institution + ": " + edu.cgpa);
+});
+    </script>
+</body>
+</html>
